@@ -20,7 +20,15 @@ pipeline{
                 sh "npm test"
             }
         }
+ 
+        stage('Release') {
+            steps {
+                sh '''
+                    oc project kwvzeh-greetings
+                    oc start-build greeting-console --follow --wait
+                '''
+            }
+        }
 
-        // Add the Release stage here
     }
 }
