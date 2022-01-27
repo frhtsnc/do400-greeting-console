@@ -14,6 +14,6 @@ spec:
   output:
     to:
       kind: DockerImage
-      name: quay.io/frhtsnc/greeting-console
+      name: quay.io/ferhat_sanuc/greeting-console
     pushSecret:
       name: quay-credentials
